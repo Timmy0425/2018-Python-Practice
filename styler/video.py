@@ -28,7 +28,7 @@ class Video:
          - Return your results
         '''
         frames = []
-        while(self.cap.isOpened()):
+        while self.cap.isOpened():
             ret, cap_frame = self.cap.read()
             if ret == True:
                 out = resize(cap_frame, image_h=int(image_h), image_w=int(image_w))
@@ -41,7 +41,7 @@ class Video:
 
         print(len(frames))
         self.frames = frames  # 5-3 let object have the result
-        return frames[:]  # return your results
+        return frames  # return your results
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.cap.release()
