@@ -5,7 +5,6 @@ from datetime import datetime
 import tensorflow as tf
 import os
 os.environ["TF_CPP_MIN_LOG_LEVEL"]="3"
-import cv2
 
 '''
 1. import `Video` and `save_video` from the correct module of package "styler"
